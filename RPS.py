@@ -2,11 +2,13 @@ import random
 
 print("Lets Play Rock, Paper, Scissors")
 
-rock = 0
-paper = 1
-scissors = 2
+gamerange = range(1,100, 2)
 
-gamecount = int(input('How many games shall we play?'))
+try:
+  gamecount = int(input('How many games shall we play? Please select an odd number between 1 and 99: '))
+except ValueError:
+  gamecount = int(input("Please select an odd number between 1 and 99: "))
+
 user_wins = 0
 comp_wins = 0
 
